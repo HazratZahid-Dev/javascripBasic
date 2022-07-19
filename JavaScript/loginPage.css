@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(153, 161, 158);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    display: flex;
+    
+}
+.container{
+    background:linear-gradient(rgb(54, 11, 11),rgb(7, 34, 7));
+    width: 200px;
+    height: 200px;
+    margin-top: 200px;
+    border-radius: 5px;
+    box-shadow: 15px 10px #3a2727;
+   
+}
+.login{
+    text-align: center;
+    margin-top: 40px;
+}
+.login label{
+   
+    color: white;
+    font-size: 13px;
+    border: 0px;
+    transform: translateX(10px);
+  
+}
+.login input{
+    border: 0px;
+    border-bottom: 1px solid white;
+    border-radius: 3px;
+    text-decoration: none;
+    background: transparent;
+
+   
+
+}

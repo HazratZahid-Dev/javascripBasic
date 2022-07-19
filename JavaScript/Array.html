@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*var ary=[10,20,30,40,50];// we can add multiple datatype in arrays
+        var sum=0;
+        document.write("the lenth of the array is :"+" "+ary.length+"<br>");
+        for(var index=0; index<=4; index++){
+            document.write(ary[index]+"<br>");
+            sum=sum+ary[index];
+        }
+        document.write("the sum of the array is :"+sum)*/
+        var ary = new Array();
+        /* ary[0]=10;
+         ary[1]=20;
+         ary[2]=30;
+         ary[3]=40;
+         ary[4]="shahid";
+         ary[5]="zahid";
+         ary[6]="khalid";*/
+        // this is used for to get the data from the user and store it in the arrays
+        for (var g = 0; g <= 6; g++) {
+            ary[g] = prompt("enter the value!");
+        }
+        document.write("<ul>");
+        for (var i = 0; i <= 6; i++) {
+            document.write("<li>"+ary[i] +"</li>"+ "<br>")
+        }
+        document.write("</ul>");
+    </script>
+</body>
+
+</html>

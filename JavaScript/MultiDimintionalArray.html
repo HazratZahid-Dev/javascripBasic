@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* var ary = [
+             ["<b>Name</b>", "<b>Age</b>", "<b>Male/Female</b>", "<b>Depatement</b>"],
+             ["zahid", 18, "male", "software house"],
+             ["Basit", 22, "male", "zoology"],
+             ["shahid", 18, "male", "chemistry"],
+             ["Rehman", 18, "male", "software house"],
+ 
+         ]
+         document.write("<table border='2px'>");
+         for (var i = 0; i < ary.length; i++) {
+             document.write("<tr>");
+             for (var b = 0; b < ary[i].length; b++) {
+                 document.write("<td>"+ary[i][b] +"</td>"+ " ");
+             }
+             document.write("<br>")
+             document.write("</tr>");
+         }
+         document.write("</table>");*/
+        //modify in array
+        /* var ary=["zahid","shahid",122,"walid"];
+         document.write(ary+"<br>");
+         //To remove the index there is property is used to delete the element from the entire array
+         delete ary[1];
+         document.write(ary+" "+"(in this index the shahid name is removed)");
+         ary[0]="zia"
+         for(var i=0;i<4;i++){
+             document.write(ary[i]+'<br>');
+         }*/
+        //Array Method
+        //reverse and sort method
+        //var ary=["zahid","shahid","walid","inam","abid"];
+        /* document.write(ary+"<br>");
+         ary.sort();
+         document.write(ary+" "+"(It show the order of the list in the array)"+"<br>");
+         ary.reverse();
+         document.write(ary+" "+"(this will show the reverse order of the array )"+"<br>")
+         ary.pop();
+         document.write(ary+" "+"(the last element of the array is remove)"+"<br>");
+         ary.push('zuabir');
+         document.write(ary);*/
+
+        // shift and unshift
+        //var ary=["zahid","shahid","walid","inam","abid"];
+        /*document.write(ary+"<br>");
+        ary.shift();
+        document.write(ary+" "+" the shift methos is used here the first element is removed"+"<br>");
+        ary.unshift("zaman");
+        document.write(ary+ " "+"the unshift method is used to add the new element of the array the add element of the array is add the begning of the array");
+        */
+       //Array methos concat() and join()
+      // var ary=["zahid","shahid","walid","inam","abid"];
+       //var newAry=ary.concat("zameen","khan");
+       //document.write(newAry+" "+"the concat method is used to concat the new elements to the array at the last position")
+        // var a=["zahid","khan","Naveed"];
+         //var b=["azam","sher","qasam"];
+         //var c=a.concat(b);
+         //document.write(c+"  "+ "the two arrays are concat here we can concat multiple array with the concat method");
+         //the method is used to convert the array into string
+
+         /*var a=["zahid","khan","Naveed"];
+         var b=["salman","khalid","zeeshan"];
+         var c=a.join(" /");
+         document.write(c);*/
+        /* var a=["zahid","khan","Naveed","shahid","khalid"];
+         //var b=a.slice(start,3 end);
+         var b=a.slice(1,3);
+         document.write(b+'<br>');
+         a.splice(2,2,"anwar","asad");//splice is used for to adjust the element in the existing array.to remove the items the deleting start from 
+         //the new add element
+         document.write(a)*/
+         //the indexof is genrally is used for to find the index of the array element
+        /* var a=["zahid","khan","Naveed","shahid","khalid","zahid"];
+         var index=a.indexOf('zahid',4);
+         document.write(index+'<br><br>');
+         var last=a.lastIndexOf("khalid");
+         document.write(last);*/
+         
+         //Include method: It is used to seach in items in array it return True OR false
+         /*var a=["zahid","khan","Naveed","shahid","khalid","zahid"];
+         var include=a.includes("zahidw");
+         document.write(include);*/
+
+         // some() and every() method some is used for to check the array elements
+         /*var ages=[11,22,12,21,15,17,18];
+         document.write(ages+"<br><br>");
+         var b=ages.some(checkAdult);
+         document.write(b);
+         function checkAdult(age){
+            return age>18;
+         }*/
+        /* var ages=[11,22,45];//for every method there should be every element will be greater then the condition the result will be true
+         document.write(ages+"<br><br>");
+         var b=ages.every(checkAdult);
+         document.write(b);
+         function checkAdult(age){
+            return age>10;
+         }*/
+         /*var ages=[11,22,45,33,44];//it will return the 22 becaus it will compare the number if the number is compare the it show the first number
+
+         document.write(ages+"<br><br>");
+         var number=ages.find(adultAge);
+         document.write(number)
+         function adultAge(age){
+            
+            return age>=18;
+         }*/
+
+         //findindex is used to show the index of the compare number
+        /* var ages=[11,22,45,33,44]
+         
+         document.write(ages+"<br><br>");
+         var number=ages.findIndex(adultAge);//the output of the code is 1 becaus it show the index of the elements
+         document.write(number)
+         function adultAge(age){
+            
+            return age>=18;
+         }*/
+         // Filter is used for to show all the number greater the comparable number in a new array
+         /*var ages=[11,22,45,33,44]
+         document.write(ages+"<br><br>");
+         var filter=ages.filter(adultAges);
+         document.write(filter+"<br><br>");//the output of the program is 22,45,33,44 is that it is arrray that is the output of the array
+         function adultAges(age){
+            return age>=18;
+         }*/
+         //tostring Convert array into string
+         /*var str=['zahid','shahid','khalid','walid','naeem'];
+         document.write(str+"<br><br>");
+         var tostr=str.toString();
+         document.write(tostr);*/
+         //foreach Method
+         var str=['zahid','shahid','khalid','walid','naeem'];
+         str.forEach(function(value,index){
+            document.write(index+":"+value+"<br> ");
+         })
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

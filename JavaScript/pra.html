@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container bg-success">
+        <h2 class="text-center">form validation</h2>
+
+        <form onsubmit="return validation()">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter your Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                    placeholder="Enter your name">
+                <span id="names" class="text-danger font-weight-bold"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+                <span id="passwords" class="form-text "></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="cpasswords" placeholder="Confirm Password">
+                <span id="passwordss" class="form-text text-danger font-weight-bold"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Mobile Number</label>
+                <input type="text" class="form-control" id="number" placeholder="Enter Mobile Number">
+                <span id="numbers" class="form-text text-danger font-weight-bold"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Enter your Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter your Eamil">
+                <span id="emails" class="form-text "></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validation() {
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            var cpasswords = document.getElementById('cpasswords').value;
+            var number = document.getElementById('number').value;
+            var email = document.getElementById('email').value;
+            var emails = document.getElementById('emails').value;
+
+            if (name == "") {
+                document.getElementById('names').innerHTML = ('please enter name!');
+                return false;
+
+            }
+            if (!isNaN(name)) {
+                document.getElementById('names').innerHTML = ('Number not allowed');
+                return false;
+
+            }
+
+            if (password == "") {
+                document.getElementById('passwords').innerHTML = ('pleas enter password');
+                return false;
+
+            }
+            if ((password.lenth <= 5) || (password.lenth > 20)) {
+                document.getElementById('passwords').innerHTML = ('the lenth of the password is 5 to 20');
+                return false;
+
+            }
+            if (password != cpasswords) {
+                document.getElementById('passwordss').innerHTML = ('The password deos not match!');
+                return false;
+
+            }
+            if (email == "") {
+                document.getElementById('emails').innerHTML = ('Please enter email');
+                return false;
+
+            }
+            if (email.indexOf('@') <= 0) {
+                document.getElementById('emails').innerHTML = ('@ not in the start position');
+                return false;
+
+            }
+            if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+                document.getElementById('emails').innerHTML = " ** . Invalid Position";
+                return false;
+            }
+            if (number==""){
+                document.getElementById('numbers').innerHTML=('Enter a mobile number');
+            }
+            if (isNaN(number)) {
+                document.getElementById('numbers').innerHTML=('only number allowed')
+                
+            }
+
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

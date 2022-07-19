@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="script" onclick="changeColor()" style="cursor: pointer;">zahid from university of buner pakistan</h2>
+    <form>
+        <input type="button" id="myButton" value="NO" onclick="Buttontoggle();">
+    </form>
+</body>
+<script type="text/javascript">
+
+
+
+
+    document.getElementById('script').style.background = "grey";
+    document.getElementById('script').style.padding = "20px";
+
+    function changeColor() {
+        document.getElementById('script').style.color = 'green';
+        document.getElementById('script').style.marginLeft = '40px';
+    }
+
+
+    function Buttontoggle() {
+        var t = document.getElementById("myButton").innerHTML;
+        if (t.value == "YES") {
+            t.value = "NO";
+        }
+        else if (t.value == "NO") {
+            t.value = "YES";
+        }
+    }
+
+
+    
+
+</script>
+
+</body>
+
+</html>

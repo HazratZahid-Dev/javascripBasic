@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ww {
+            color: azure;
+            background-color: black;
+            border: 2px solid green;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+
+        }
+
+        .image1 {
+            width: 500px;
+            height: 600px;
+        }
+        .image-div{
+            width: 500px;
+            height: 600px;
+            
+          
+        }
+    </style>
+</head>
+
+<body>
+    <p id="show"></p>
+    <button type="button" class="ww"
+        onclick="document.getElementById('show').innerHTML=('my name is hazrat zahid');">show</button>
+    <h2 id="sum"></h2>
+    <h3 id="add"></h3>
+    <h4 id="my" onmouseover="document.getElementById('my').innerHTML=('No my name is shahid')">My name is zahid </h4>
+    <div id="image1"> </div>
+    <button class="ww" type="button"
+        onclick="document.getElementById('image1').innerHTML=('<img src='d1.jpg' alt='nil'>') " ;> show image</button>
+    <h3 id="fcn"></h3>
+    <h3 id="std"></h3>
+
+
+    <p>Enter the First Number: <input id="first"></p>
+    <p>Enter the Second Number: <input id="second"></p>
+    <button onclick="add()">addition</button>
+    <button onclick="sub()">subtraction</button>
+    <button onclick="mul()">multiflication</button>
+    <button onclick="division()">division</button>
+    <button onclick="mod()">modulus</button>
+    <p>multiflication = <input id="addd"></p>
+
+    <!--
+    <p>enter first number:<input id="first"></p>
+    <p>enter Second number:<input id="second"></p>
+    <button onclick="mul1">multifly</button>
+    <p>multiflication:<input id="mult"></p>
+    -->
+    <button onclick="picture()" class="ww">click to show image</button>
+    <img id="bigpic" src="" >
+    <button onclick="text()" class="ww" >MoreText</button>
+    <h5 id="text-1"></h5>
+
+
+    <script>
+        //var x;
+        //var y;
+        //var z;
+        //x="my name zahid i am from peshawar";
+        //y="i am bs computer science student";
+        //z= x+y;
+        //document.getElementById('sum').innerHTML=(z);
+        //var a;
+        //var b;
+        //a=22;
+        //b=33;
+        //c=a+b;
+        //document.getElementById('add').innerHTML=("the sum of two number is:"+c)
+        var x;
+        var y;
+        var z;
+        x = 22;
+        y = 33;
+        z = x % y;
+        document.getElementById('add').innerHTML = ('the multiflication of two number is:' + z);
+        //document.getElementById('image1').innerHTML=('the multiflication of two number is');
+        function myfunction(p1, p2) {
+            return p1 * p2;
+
+        }
+        document.getElementById('fcn').innerHTML = myfunction(33, 44);
+
+
+        function student(F_name, L_name) {
+            //var F_name;
+            //var L_name;
+            //var fullName;
+            //fullName=F_name+L_name;
+            return F_name + L_name
+        }
+        document.getElementById('std').innerHTML = student("hazrat", "zahid");
+
+        //function addition(){
+        //  var a=32;
+        //var b=33;
+
+
+
+        // }
+        //document.getElementById('addition').innerHTML=addition("the sum of two number is :",a+b);
+
+        // function add() {
+        //   var numOne, numTwo, sum;
+        // numOne = parseInt(document.getElementById("first").value);
+        //numTwo = parseInt(document.getElementById("second").value);
+        //sum = numOne * numTwo;
+        //document.getElementById("addd").value = sum;
+        //  }
+        //function mul1(){
+        //var a,b,c;
+        //a=parseInt(document.getElementById("first").value);
+        // a=parseInt(document.getElementById("second").value);
+        //c=a*b;
+        // document.getElementById("mult").value=c;
+
+        //}
+        function add() {
+            var numOne, numTwo, sum;
+            numOne = parseInt(document.getElementById("first").value);
+            numTwo = parseInt(document.getElementById("second").value);
+            sum = numOne + numTwo;
+
+            document.getElementById("addd").value = sum;
+        }
+        function sub() {
+            var numOne, numTwo, sum;
+            numOne = parseInt(document.getElementById("first").value);
+            numTwo = parseInt(document.getElementById("second").value);
+            sum = numOne - numTwo;
+
+            document.getElementById("addd").value = sum;
+        }
+        function mul() {
+            var numOne, numTwo, sum;
+            numOne = parseInt(document.getElementById("first").value);
+            numTwo = parseInt(document.getElementById("second").value);
+            sum = numOne * numTwo;
+
+            document.getElementById("addd").value = sum;
+        }
+        function division() {
+            var numOne, numTwo, sum;
+            numOne = parseInt(document.getElementById("first").value);
+            numTwo = parseInt(document.getElementById("second").value);
+            sum = numOne / numTwo;
+
+            document.getElementById("addd").value = sum;
+        }
+        function mod() {
+            var numOne, numTwo, sum;
+            numOne = parseInt(document.getElementById("first").value);
+            numTwo = parseInt(document.getElementById("second").value);
+            sum = numOne % numTwo;
+
+            document.getElementById("addd").value = sum;
+        }
+
+        document.getElementById("myBtn").onclick = displayImage;
+
+        function displayImage() {
+            var pic="http://img.tesco.com/Groceries/pi/118/5000175411118/IDShot_90x90.jpg";
+            document.getElementById('mybtn').src = pic.replace('90x90', '225x225');
+           
+        }
+
+        function picture() {
+            var pic = "d1.jpg"
+            document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+
+        }
+        function text(){
+            document.getElementById('text-1').innerHTML=('my name is zahid i am from Buner now i start learning in software house in peshawar.');
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

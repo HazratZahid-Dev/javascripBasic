@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* var obj=new Object();
+        obj.first_name="Hazrat";
+        obj.last_name="Zahid";
+        document.write(obj.first_name);
+        document.write(obj.last_name);*/
+        /*var person={
+            first_name:'zahid',
+            last_name:'khan',
+            age:23,
+            father_name:'sabir'
+        }
+        document.write("The first name of the person:"+"  "+person.first_name+"<br>");
+        document.write("The last name of the person:"+"  "+person.last_name+'<br>');
+        document.write("The father  name of the person:"+"  "+person.father_name+"<br>");
+        document.write("The age of the person:"+"  "+person.age);*/
+
+        //Array of object
+
+        /*var student = [
+            {
+                Name: "zahid",
+                f_name:"Rahman",
+                age:25
+            },
+            {
+                Name: "shahid",
+                f_name:"Zaheer",
+                age:24
+            },
+            {
+                Name: "Waleed",
+                f_name:"Waqar khan",
+                age:21
+            },
+            {
+                Name: "Naeem",
+                f_name:"Zia ul haq",
+                age:23
+            }
+        ];
+       // console.log(student);
+       //The best way to show the object value
+       for(var a=0; a<student.length;a++){
+        document.write(student[a].Name+" "+student[a].f_name+" "+student[a].age+"<br>");
+       }*/
+
+        //for in loop is used for to show all the value with simpale way
+       /* var obj = 
+            {
+            first_name: "zahid",
+            last_name: "khan",
+            age: 23,
+            father_name: "Bakhti rahman"
+        };
+
+       
+    
+        for (var key in obj) {
+            document.write(obj[key] + " ");
+        }*/
+
+        // map deos not change the existing array but the value map in new array
+        /*var ary=[1,2,3,4,5,6,7];
+        document.write(ary+"<br>");
+        var zz=ary.map(test);
+        document.write("It will create the multiflication of the two ten :"+"  "+zz);
+        function test(y){
+            return y*10;
+        }*/
+        // Array of objects
+        var ary=[
+            {f_name:"zahid",l_name:"shahid",age:25},
+            {f_name:"zaman",l_name:"ayan",age:22},
+            {f_name:"wazer",l_name:"asad",age:26}
+        ]
+        var bb=ary.map(test);
+        document.write(bb);
+        function test(y){
+            return y.f_name+" "+y.l_name;
+        
+
+        }
+
+    </script>
+
+</body>
+
+</html>
